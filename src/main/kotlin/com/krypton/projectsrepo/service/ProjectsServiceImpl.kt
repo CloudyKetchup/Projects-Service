@@ -38,7 +38,7 @@ class ProjectsServiceImpl(val projectsRepository : ProjectsRepository) : Project
             // check if project from database with his id exist projects list from github request
             if(!projects.stream().anyMatch{it.id == dbProject.id}) projectsForDelete.add(dbProject)
         }
-        // delete all projects that are deleted from database
+        // delete all projects that are deleted from git hub
         projectsRepository.deleteAll(projectsForDelete)
     }
 
