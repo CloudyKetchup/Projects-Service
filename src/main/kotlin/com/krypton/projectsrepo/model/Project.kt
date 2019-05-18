@@ -10,7 +10,7 @@ class Project(
 		@Column var name		: String? = null,
 		@Column var description	: String? = null,
 		@Column var language	: String? = null,
-		@Column var url			: String? = null
+		@Column var html_url	: String? = null
 ) {
 	override fun toString() : String {
 		return 	"Project { \n" +
@@ -18,6 +18,6 @@ class Project(
 				"title			-> $name		\n" +
 				"description	-> $description	\n" +
 				"language		-> $language	\n" +
-				"url			-> $url			\n }"
+				"url			-> $html_url	\n }"
 	}
 }
