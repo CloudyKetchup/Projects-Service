@@ -44,14 +44,9 @@ class ProjectsServiceImpl(val projectsRepository : ProjectsRepository) : Project
 
     @Throws(Exception::class)
     override fun getGithubProjects() {
-        try {
-            // get projects list from github
-            requestProjects().apply {
-                removeRepoDeletedProjects(this)
-                saveProjects(this)
-            }
-        }catch (e : Exception) {
-            e.printStackTrace()
+        requestProjects().apply {
+            removeRepoDeletedProjects(this)
+            saveProjects(this)
         }
     }
 
