@@ -24,7 +24,7 @@ class MainController(val projectsService: ProjectsServiceImpl) {
      *
      * @return [HttpStatus]
      */
-    @PostMapping("/forceUpdate")
+    @GetMapping("/forceUpdate")
     fun updateProjects() : HttpStatus {
         return try {
             projectsService.getGithubProjects()

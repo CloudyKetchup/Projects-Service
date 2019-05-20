@@ -24,6 +24,7 @@ repositories {
 
 dependencies {
 	implementation("org.springframework.data:spring-data-jpa:2.1.8.RELEASE")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa:2.1.5.RELEASE")
 	implementation("org.springframework:spring-orm:5.1.7.RELEASE")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("com.fasterxml.jackson.module:jackson-module-kotlin")
@@ -32,9 +33,7 @@ dependencies {
 	implementation("mysql:mysql-connector-java:5.1.6")
 	implementation("org.apache.httpcomponents:httpclient:4.5.8")
 	implementation("com.mashape.unirest:unirest-java:1.4.9")
-	compileOnly("org.projectlombok:lombok")
 	runtimeOnly("org.springframework.boot:spring-boot-devtools")
-	annotationProcessor("org.projectlombok:lombok")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
